@@ -23,29 +23,25 @@
 body {
     margin-top: 30px;
     width: 100%;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     font-family: "Sora", sans-serif;
     font-weight: 300;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 /*-- INDEX HTML --*/
 
-header {
+.section-header {
     width: 100%;
     padding-bottom: 30px;
     border-bottom: 1px solid black;
 }
 
-header p, header div, .menu-list {
-    display: inline;
-}
-
-header div{
+.section-header p, .section-header div, .section-header ul {
     display: inline;
 }
 
@@ -62,9 +58,38 @@ header div{
     background-color: black;
 }
 
+table {
+    border: 1px solid black;
+}
+
+.second-section {
+    text-align: center;
+}
+
 .second-section img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 80px;
+    max-height: 80px;
+    filter: grayscale(100%) blur(10px);
+    transition: 0.2s ease-in;
+}
+
+.second-section img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+.second-section table td:nth-child(1) img:hover {
+    background-color: green;
+}
+
+.second-section table {
+    margin: 0 auto;
+}
+
+.second-section table td {
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
 }
 
 /*-- ABOUT HTML--*/
