@@ -3,15 +3,23 @@
 /* TEXT FONT */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
-:root {
-    --background-color: #caf0f8;
-    --text-color: #00b4d8;
-    --acent-color: #03045e;
-
-    --headings-font: "Manrope", sans-serif;
-}
-
 /*-- TODAS LAS PÁGINAS --*/
+
+/* COLORES
+--molten-lava: #780000ff;
+--brick-red: #c1121fff;
+--papaya-whip: #fdf0d5ff;
+--deep-space-blue: #003049ff;
+--steel-blue: #669bbcff;
+*/
+
+:root {
+    --molten-lava: #780000ff;
+    --brick-red: #c1121fff;
+    --papaya-whip: #fdf0d5ff;
+    --deep-space-blue: #003049ff;
+    --steel-blue: #669bbcff;
+}
 
 * {
     box-sizing: border-box;
@@ -21,9 +29,8 @@
 }
 
 body {
-    margin-top: 30px;
     width: 100%;
-    /* background-color: var(--background-color); */
+    background-color: #fdf0d5ff;
     font-family: "Sora", sans-serif;
     font-weight: 300;
 }
@@ -33,103 +40,233 @@ a {
     color: black;
 }
 
+footer {
+    background: black;
+}
+
 /*-- INDEX HTML --*/
 
-.section-header {
+/* NAVIGATION BAR / HEADER */
+.header {
     width: 100%;
-    padding-bottom: 30px;
+    
     border-bottom: 1px solid black;
 }
 
-.section-header p, .section-header div, .section-header ul {
+.header p, .header div, .header ul {
     display: inline;
 }
 
-.menu-list {
+.header .index {
+    margin-right: 50%;
+    font-size:14px;
+    font-style: italic;
+}
+
+.header .menu-container .menu-list {
     margin-top: 20px;
 }
 
-.menu-list li{
+.header .menu-container .menu-list li{
     display: inline;
+    width: fit-content;
 }
 
-.menu-list li a {
+.header .menu-container .menu-list li a {
+    display: inline-block;
+    width: fit-content;
     padding: 15px 25px;
-    background-color: black;
+    border-bottom: 0px solid black;
 }
 
-table {
-    border: 1px solid black;
+.header .menu-container .menu-list a::after {
+    transition: all ease-in-out 0.5s;
+    background: #003049ff;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
 }
 
-.second-section {
-    text-align: center;
+.header .menu-container .menu-list a:hover::after {
+    width: 100%;
 }
 
-.second-section img {
-    max-width: 80px;
-    max-height: 80px;
-    filter: grayscale(100%) blur(10px);
-    transition: 0.2s ease-in;
+.hero-section {
+    width: 100%;
+    margin: 50px 0;
 }
 
-.second-section img:hover {
-    transform: scale(1.2);
-    filter: grayscale(0%);
+.hero-section h1{
+    font-family: "Manrope", sans-serif;
 }
 
-.second-section table td:nth-child(1) img:hover {
-    background-color: green;
+.main-container {
+    width: 100%;
 }
 
-.second-section table {
+.main-container .container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    margin-bottom: 35px;
+    padding: 20px;
+    background: rgb(251, 231, 191);
+    transition: 0.7s;
+}
+
+.main-container .container h2 {
+    margin-bottom: 20px;
+}
+
+/* About container */
+.main-container .about-content {
+    width: 90%;
+    padding-left: 20px;
+}
+
+.main-container .about-content, .main-container .about-content *{
+    text-align: left;
+}
+
+/* Music container */
+.main-container .music-content {
+    width: 90%;
     margin: 0 auto;
 }
 
-.second-section table td {
-    width: 300px;
-    height: 150px;
-    border: 1px solid black;
+.main-container .music-content .artist-content, .main-container .music-content .general-content {
+    width: 49%;
+    vertical-align: middle;
+    display: inline-block;
 }
 
-/*-- ABOUT HTML--*/
-
-#about-section{
-    background-color: #00b4d8;
-    width: 600px;
-    height: 230px;
-    border-radius: 12px;
+.main-container .music-content .artist-content img {
+    cursor: pointer;
+    transform-origin: bottom right;
+    max-width: 100%;
+    max-height: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 0px #c1121fff);
+    transition: 0.5s;
 }
 
-#about-section h1 {
-    height: 40px;
-    background-color: #03045e;
-    color: #ffffff;
-    border-radius: 12px 12px 0 0;
+.main-container .music-content .artist-content img:hover {
+    transform:
+        scale(1.03)
+        translate(-10px, -10px);
+    filter: drop-shadow(10px 10px 1px #c1121fff);
 }
 
-#about-section section {
-    width: 500px;
-    height: auto;
+.main-container .music-content .general-content {
+    margin-top: 30px;
 }
 
-#about-section section img {
-    width: 100px;
-    margin-top: 31px;
-    float: right;
-    border-radius: 12px;
+.main-container .music-content .general-content blockquote {
+    text-align: justify;
+    font-style: italic;
+    margin-left: 10px;
+    padding: 10px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
-#about-section section article {
-    width: 400px;
+.main-container .music-content .general-content .links-container {
+    margin: 0px 0 0 10px;
 }
 
-#about-section section article h2 {
-    margin-left: 16px;
+.main-container .music-content .general-content .links-container a {
+    display: block;
+    width: fit-content;
+    margin-top: 80px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.main-container .music-content .general-content .links-container a::after {
+    transition: all ease-in-out 0.5s;
+    background: #780000ff;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+}
+
+.main-container .music-content .general-content .links-container a:hover::after {
+    width:100%;
+}
+
+.main-container .music-content .general-content .links-container a:last-child {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* Favorite container*/
+.main-container .favorite .favorite-contents {
+    text-align: center
+}
+
+.main-container .favorite .favorite-contents table {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.main-container .favorite .favorite-contents table img {
+    max-width: 80px;
+    max-height: auto;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.main-container .favorite .favorite-contents table img:hover {
+    transform: scale(1.2)
+}
+
+.main-container .favorite .favorite-contents table th {
+    border-bottom: 1px solid black;
+}
+
+.main-container .favorite .favorite-contents table td {
+    max-width: 100px;
+}
+
+.main-container .favorite .favorite-contents table td p {
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Trivia container */
+.main-container .trivia .trivia-content img {
+    max-width: 250px;
+    max-height: auto;
+    transition: 0.7s;
+}
+
+.main-container .trivia .trivia-content img:hover {
+    transform:
+        scale(1.1)
+        rotate(360deg)
+}
+
+.main-container .trivia .trivia-content img::after {
+    transition: all ease-in-out 0.5s;
+    background: #003049ff;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+}
+
+.main-container .trivia .trivia-content img:hover::after {
+    width: 100%;
 }
 
 /*-- TRIVIA HTML --*/
 .trivia-container {
+    width: 100%;
     text-align: center;
 }
 
@@ -144,3 +281,73 @@ table {
     font-weight: 800;
     color: red;
 }
+
+/*-- PLAYLIST index.html --*/
+.container {
+    width: 100%;
+}
+
+.container aside, .container .main {
+    display: inline-block;
+    height: 80vh;
+    vertical-align: top;
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.container aside {
+    width: 30%;
+    text-align: left;
+}
+
+.container .main {
+    margin-left: -4px;
+    width: 69%;
+}
+
+/*-- PLAYLIST playlist.html --*/
+/* Total height: 93.2 vh*/
+.artists-container {
+    height: 23.2vh;
+    background: blue;
+}
+
+.artists-container .favorite-artist-container article {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.artists-container .favorite-artist-container article:nth-child(3) {
+    margin: 0 300px;
+}
+
+.artists-container .favorite-artist-container article img{
+    max-width: 80px;
+    max-height: auto;
+}
+
+.album, .song{
+    border-radius: 5px;
+}
+
+.artists-container .favorite-artist-container article .album-content {
+    display: inline-block;
+}
+
+.artists-container .favorite-artist-container article .album-content ul, .artists-container .favorite-artist-container article .album-content p{
+    font-size: 12px;
+    text-align: left;
+}
+
+.artists-container .favorite-artist-container article .album-content li {
+    font-size: 10px;
+    list-style-type: none;
+    text-align: left;
+}
+
+.down {
+    height: 70vh;
+    background: red;
+}
+

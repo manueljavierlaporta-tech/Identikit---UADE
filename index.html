@@ -7,61 +7,103 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <section class="section-header">
-        <p>Manuel La Porta</p>
+    <section class="header">
+        <a href="/index.html" class="index">Manuel La Porta</a>
         <div class="menu-container">
             <ul class="menu-list">
+                <li><a href="about.html">Acerca de mí</a></li>
                 <li><a href="musica.html">Música</a></li>
-                <li><a href="peliculas.html">Películas</a></li>
-                <li><a href="series.html">Series</a></li>
-                <li><a href="./Trivia/01trivia.html">Trivia</a></li>
+                <li><a href="favoritas.html">Páginas Favoritas</a></li>
+                <li><a href="./Trivia/index.html">Trivias</a></li>
             </ul>
         </div>
     </section>
-    <section class="first-section">
-        <h1>Identikit: Manuel La Porta</h1>
+    <section class="hero-section">
+        <h1>Identikit</h1>
         <p>¡Bienvenidos a mi sitio!</p>
     </section>
-    <section class="second-section">
+    <section class="main-container">
         <!-- SEPARADOR -->
-        <P>Haga click <a href="about.html">aquí</a> para ver más.</P>
-        <h2>Mis páginas favoritas:</h2>
-        <table>
-            <tr>
-                <th>YouTube</th>
-                <th>Tidal</th>
-                <th>X</th>
-                <th>Google</th>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://www.youtube.com">
-                        <img src="Images/YouTube Logo.png" alt="">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.tidal.com">
-                        <img src="Images/Tidal Logo.png" alt="">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.x.com">
-                        <img src="Images/Twitter Logo.png" alt="">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.google.com">
-                        <img src="Images/Google Logo.png" alt="">
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <!--
-            1. YouTube
-            2. Tidal
-            3. Twitter / X
-            4. Google
-        -->
+         <article class="about container">
+            <h2>Acerca de mi</h2>
+            <div class="about-content">
+                <p>Nacido en CABA, mi niñez la pasé en Flores y mi adolescencia en San Telmo.</p>
+                <p>Deportista (retirado por el momento) y músico.</p>
+                <a href="/about.html">Ver más</a>
+            </div>
+         </article>
+         <article class="music container">
+            <h2>Música</h2>
+            <div class="music-content">
+                <div class="artist-content">
+                    <h3>Queens of the Stone Age</h3>
+                    <img src="/Images/QOTSA group.jpg" alt="">
+                </div>
+                <div class="general-content">
+                    <blockquote>
+                        Because not everything that goes around comes back around, you know.
+                        Holdin' on too long is just a fear of letting go.
+                        Because not everything that goes around comes back around, you know.
+                    </blockquote>
+                    <div class="links-container">
+                        <a href="Playlist/index.html">Ver música preferida</a>
+                        <a href="Playlist/index.html">Ver playlist recomendada</a>
+                    </div>
+                    
+                </div>
+            </div>
+         </article>
+         <article class="favorite container">
+            <h2>Páginas Favoritas</h2>
+            <div class="favorite-contents">
+                <table>
+                    <tr>
+                        <th colspan="2">Ocio</th>
+                        <th colspan="2">Tech</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com">
+                                <img src="Images/YouTube Logo.png" alt="">
+                            </a>
+                        </td>
+                        <td>
+                            <p>Si bien sirve para investigar cosas nuevas, lo uso mucho más para pasar el rato que para investigar.</p>
+                        </td>
+                        <td>
+                            <a href="https://www.stackoverflow.com">
+                                <img src="Images/Stack Overflow.png" alt="">
+                            </a>
+                        </td>
+                        <td>
+                            <p>Salvo por la parte en que te tratan de terrorista si osas postear (sin saber) un tópico ya subido hace 15 años, tope de gama.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <a href="/favoritas.html">Ver todas</a>
+            </div>
+         </article>
+         <article class="trivia container">
+            <h2>Trivias</h2>
+            <div class="trivia-content">
+                <h3>Electric Light Orchestra</h3>
+                <a href="https://www.jefflynneselo.com/">
+                    <img src="/Images/ELO logo.png" alt="">
+                </a>
+                <p>¿Cuánto pensás que podés diferenciar canciones de ELO?</p>
+                <a href="/Trivia/ELO/01trivia.html">Ir a la trivia</a>
+            </div>
+            <div class="trivia-content">
+                <h3>The Beatles</h3>
+                <a href="https://www.thebeatles.com">
+                    <img src="/Images/Beatles logo.png" alt="">
+                </a>
+                <p>¿Podrás diferenciar cada etapa de los Beatles según la canción?</p>
+                <a href="/Trivia/Beatles/01trivia.html">Ir a la trivia</a>
+            </div>
+         </article>
     </section>
 </body>
 </html>
