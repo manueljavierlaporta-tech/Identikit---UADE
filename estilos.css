@@ -306,11 +306,9 @@ footer {
     width: 69%;
 }
 
-/*-- PLAYLIST playlist.html --*/
-/* Total height: 93.2 vh*/
-.artists-container {
-    height: 23.2vh;
-    background: blue;
+/*-- PLAYLIST index.html --*/
+.artist-container {
+    background: rgb(22, 22, 22);
 }
 
 .artists-container .favorite-artist-container article {
@@ -319,11 +317,11 @@ footer {
 }
 
 .artists-container .favorite-artist-container article:nth-child(3) {
-    margin: 0 300px;
+    margin: 0 250px;
 }
 
 .artists-container .favorite-artist-container article img{
-    max-width: 80px;
+    max-width: 100px;
     max-height: auto;
 }
 
@@ -347,7 +345,66 @@ footer {
 }
 
 .down {
-    height: 70vh;
-    background: red;
+    background: url('./Images/Playlist Background.avif');
+    background-size: cover;
+    width: 100%;
 }
 
+.down .favorite-albums {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.down .favorite-albums table {
+    border-spacing: 10px 30px;
+    border-collapse: separate;
+}
+
+.down .favorite-albums table td {
+    width: 155px;
+    height: 155px;
+    border: 1px solid black;
+    background: rgb(177, 177, 177, 0.3);
+}
+
+.down .favorite-albums table td p {
+    font-size:12px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight:900;
+}
+
+.down .favorite-albums table img {
+    max-width: 100px;
+    max-height: auto;
+    border-radius:5px;
+    transition: 0.3s;
+}
+
+.down .favorite-albums table img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px rgba(150, 150, 150, 0.6))
+}
+
+.down .favorite-songs {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.down .favorite-songs .playlist-button a {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px 10px;
+    color: white;
+    font-weight: 900;
+}
+
+/*-- PLAYLIST List / index.html --*/
+
+#selected {
+    background: red;
+}
