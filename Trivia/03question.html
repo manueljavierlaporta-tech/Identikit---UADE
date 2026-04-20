@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia</title>
+    <title>Trivia | Canción 1</title>
     <link rel="stylesheet" href="../../estilos.css">
     <style>
         body {
@@ -20,6 +20,7 @@
 
         .header {
             width: 100%;
+            background: #0a0a1a;
             border-bottom: 1px solid #e8e8ff;
         }
 
@@ -68,7 +69,7 @@
         }
 
         .trivia-container {
-            margin-top: 300px;
+            margin-top: 100px;
         }
     </style>
 </head>
@@ -77,18 +78,24 @@
         <a href="/index.html" class="index">Manuel La Porta</a>
         <div class="menu-container">
             <ul class="menu-list">
-                <li><a href="about.html">Acerca de mí</a></li>
-                <li><a href="musica.html">Música</a></li>
-                <li><a href="favoritas.html">Páginas Favoritas</a></li>
-                <li><a href="./Trivia/index.html">Trivias</a></li>
+                <li><a href="/about.html">Acerca de mí</a></li>
+                <li><a href="/Playlist/index.html">Música</a></li>
+                <li><a href="/Trivia/00indextrivia.html">Trivia</a></li>
             </ul>
         </div>
     </section>
     <div class="trivia-container">
         <h1>Mr Blue Quiz</h1>
-        <p>Viajá al espacio con Electric Light Orchestra. Escuchá unos segundos de cada canción y elegí el título correcto entre dos opciones.<br>¿Podés reconocer los hits de Jeff Lynne antes de que la nave despegue?</p>
-        <div class="btn-container">
-            <a href="../Electric Light Orchestra/01question.html">Empezar</a>
+        <audio src="../../Music/It's Over.mp3" type="audio/mp3" controls></audio>
+        <div class="trivia-options">
+            <div class="trivia-option" style="margin-right: 50px;">
+                <h3>Midnight Blue</h3>
+                <a href="./error.html"><img src="../../Images/Discovery.jpg" alt=""></a>
+            </div>
+            <div class="trivia-option" style="margin-left: 50px;">
+                <h3>It's Over</h3>
+                <a href="./04question.html"><img src="../../Images/Out of the Blue.jpg" alt=""></a>
+            </div>
         </div>
     </div>
 </body>
