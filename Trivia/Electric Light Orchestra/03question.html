@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia | Canción 1</title>
+    <link rel="stylesheet" href="../../estilos.css">
+    <style>
+        body {
+            background: #0a0a1a;
+            color: #e8e8ff;
+            display: inline-block;
+            height: 100vh;
+            vertical-align: middle;
+        }
+        .trivia-container {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .header {
+            width: 100%;
+            border-bottom: 1px solid #e8e8ff;
+        }
+
+        .header a {
+            color: #e8e8ff;
+        }
+
+        .header p, .header div, .header ul {
+            display: inline;
+        }
+
+        .header .index {
+            margin-right: 50%;
+            font-size:14px;
+            font-style: italic;
+        }
+
+        .header .menu-container .menu-list {
+            margin-top: 20px;
+        }
+
+        .header .menu-container .menu-list li{
+            display: inline;
+            width: fit-content;
+        }
+
+        .header .menu-container .menu-list li a {
+            display: inline-block;
+            width: fit-content;
+            padding: 15px 25px;
+            border-bottom: 0px solid #f5c518;
+            color: #e8e8ff;
+        }
+
+        .header .menu-container .menu-list a::after {
+            transition: all ease-in-out 0.5s;
+            background: #f5c518;
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+        }
+
+        .header .menu-container .menu-list a:hover::after {
+            width: 100%;
+        }
+
+        .trivia-container {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <a href="/index.html" class="index">Manuel La Porta</a>
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li><a href="about.html">Acerca de mí</a></li>
+                <li><a href="musica.html">Música</a></li>
+                <li><a href="favoritas.html">Páginas Favoritas</a></li>
+                <li><a href="./Trivia/index.html">Trivias</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="trivia-container">
+        <h1>Mr Blue Quiz</h1>
+        <audio src="../../Music/It's Over.mp3" type="audio/mp3" controls></audio>
+        <div class="trivia-options">
+            <div class="trivia-option" style="margin-right: 50px;">
+                <h3>Midnight Blue</h3>
+                <a href="./error.html"><img src="../../Images/Discovery.jpg" alt=""></a>
+            </div>
+            <div class="trivia-option" style="margin-left: 50px;">
+                <h3>It's Over</h3>
+                <a href="./04question.html"><img src="../../Images/Out of the Blue.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

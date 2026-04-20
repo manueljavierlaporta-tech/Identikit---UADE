@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist Index</title>
-    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href=".././estilos.css">
 </head>
 <body>
     <section class="header">
@@ -20,32 +20,18 @@
     </section>
     <section class="artists-container">
         <section class="favorite-artist-container">
-            <h2>Artista Favorito</h2>
-            <article>
-                <img src="/Images/QOTSA group.jpg" alt="" style="max-width: 400px; border-radius: 10px;">
-                <h3>Queens of the Stone Age</h3>
-            </article>
-            <article>
-                <img src="/Images/Like Clockwork.jpg" alt="" class="album" style="max-width: 200px">
-                <div class="album-content">
-                    <p>Año de salida: 2013</p>
-                    <ul>
-                        Personas que grabaron:
-                        <li>Josh Homme</li>
-                        <li>Troy Van Leeuwen</li>
-                        <li>Dean Fertita</li>
-                        <li>Jon Theodore</li>
-                        <li>Dave Grohl</li>
-                        <li>Elton John</li>
-                        <li>Alex Turner</li>
-                        <li>Trent Reznor</li>
-                    </ul>
-                </div>
-            </article>
-            <article>
-                <img src="/Images/No One Knows.jpg" alt="" class="song">
-                <audio src=""></audio>
-            </article>
+            <table>
+                <tr>
+                    <th>Artista Favorito</th>
+                    <th>Álbum Favorito</th>
+                    <th>Canción Favorita</th>
+                </tr>
+                <tr>
+                    <td><img src="/Images/QOTSA group.jpg" alt="" style="max-width: 400px; border-radius: 10px;"></td>
+                    <td><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/5T5NM01392dvvd4EhGrCnj?utm_source=generator" width="400px" height="400px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>
+                    <td><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6y20BV5L33R8YXM0YuI38N?utm_source=generator" width="300px" height="150px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>
+                </tr>
+            </table>
         </section>
         <section class="down">
             <article class="favorite-albums">
@@ -136,28 +122,8 @@
             </article>
             <article class="favorite-songs">
                 <span class="playlist-button">
-                    <a href="/Playlist/List/playlist.html">Ir a la Playlist</a>
+                    <a href="/Playlist/List/01.html">Ir a la Playlist</a>
                 </span>
-                <!-- 
-                    1. If I Had A Tail
-                    2. No One Knows
-                    3. Lucretia
-                    4. Crown of Worms
-                    5. Limelight
-                    6. The Garden
-                    7. Lucy in the Sky with Diamonds
-                    8. In the End ("... and in the end")
-                    9. Shine a Little Love
-                    10. Mr Blue Sky
-                    11. Time Flies
-                    12. Arriving Somewhere... But Not Here
-                    13. Shadow of a Lonely Man
-                    14. Some Other Time
-                    15. Breakfast in America
-                    16. Crime of the Century
-                    17. Río Babel
-                    18. Tracción a Sangre
-                -->
             </article>
         </section>
     </section>

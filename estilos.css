@@ -5,14 +5,6 @@
 
 /*-- TODAS LAS PÁGINAS --*/
 
-/* COLORES
---molten-lava: #780000ff;
---brick-red: #c1121fff;
---papaya-whip: #fdf0d5ff;
---deep-space-blue: #003049ff;
---steel-blue: #669bbcff;
-*/
-
 :root {
     --molten-lava: #780000ff;
     --brick-red: #c1121fff;
@@ -49,8 +41,8 @@ footer {
 /* NAVIGATION BAR / HEADER */
 .header {
     width: 100%;
-    
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgb(251, 231, 191);
 }
 
 .header p, .header div, .header ul {
@@ -177,7 +169,7 @@ footer {
     margin: 0px 0 0 10px;
 }
 
-.main-container .music-content .general-content .links-container a {
+.links-container a {
     display: block;
     width: fit-content;
     margin-top: 80px;
@@ -185,7 +177,7 @@ footer {
     font-weight: 500;
 }
 
-.main-container .music-content .general-content .links-container a::after {
+.links-container a::after {
     transition: all ease-in-out 0.5s;
     background: #780000ff;
     content: "";
@@ -194,11 +186,11 @@ footer {
     width: 0;
 }
 
-.main-container .music-content .general-content .links-container a:hover::after {
+.links-container a:hover::after {
     width:100%;
 }
 
-.main-container .music-content .general-content .links-container a:last-child {
+.links-container a:last-child {
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -240,6 +232,7 @@ footer {
 
 /* Trivia container */
 .main-container .trivia .trivia-content img {
+    margin: 15px 0;
     max-width: 250px;
     max-height: auto;
     transition: 0.7s;
@@ -264,22 +257,53 @@ footer {
     width: 100%;
 }
 
-/*-- TRIVIA HTML --*/
-.trivia-container {
-    width: 100%;
+.main-container .trivia .trivia-content .links-container{
     text-align: center;
 }
 
-.trivia-container img {
-    width: 500px;
+.main-container .trivia .trivia-content .links-container a {
+    margin: 0 auto;
+}
+
+
+/*-- TRIVIA HTML --*/
+.trivia-container {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-container {
+    margin-top:30px;
 }
 
 .btn-container a {
     padding: 20px 30px;
-    background-color: var(--acent-color);
-    border: 2px solid rgba(255, 255, 255, 0.7);
+    border: 2px solid #e8e8ff;
     font-weight: 800;
-    color: red;
+    color: #f5c518;
+}
+
+.trivia-options {
+    margin-top: 50px;
+}
+
+.trivia-options .trivia-option {
+    display: inline-block;
+}
+
+.trivia-options .trivia-option img{
+    margin-top: 10px;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 8px rgba(150, 150, 150, 0));
+    transition: 0.6s;
+}
+
+.trivia-options .trivia-option img:hover{
+    filter: drop-shadow(0 0 8px rgba(150, 150, 150, 0.6))
 }
 
 /*-- PLAYLIST index.html --*/
@@ -289,16 +313,33 @@ footer {
 
 .container aside, .container .main {
     display: inline-block;
-    height: 80vh;
+    height: 100vh;
     vertical-align: top;
     list-style-type: none;
     text-align: center;
-    border: 1px solid black;
 }
 
 .container aside {
-    width: 30%;
+    width: 31%;
     text-align: left;
+    background: rgb(251, 231, 191);
+}
+
+.container aside ul li {
+    list-style-type: none;
+    background: rgb(251, 231, 191);
+    font-weight: 700;
+    transition: 0.6s;
+}
+
+.container aside ul li:hover {
+    filter: brightness(0.9);
+}
+
+.container aside ul li a {
+    display: inline-block;
+    width: 100%;
+    color: rgb(36, 36, 36);
 }
 
 .container .main {
@@ -311,16 +352,28 @@ footer {
     background: rgb(22, 22, 22);
 }
 
-.artists-container .favorite-artist-container article {
-    display: inline-block;
+.artists-container .favorite-artist-container {
+    background: #003049ff;
+    color: white;
+}
+
+.artists-container .favorite-artist-container table {
     vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+
+.artists-container .favorite-artist-container table tbody {
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
 }
 
 .artists-container .favorite-artist-container article:nth-child(3) {
-    margin: 0 250px;
+    margin: 0 0;
 }
 
-.artists-container .favorite-artist-container article img{
+.artists-container .favorite-artist-container table img{
     max-width: 100px;
     max-height: auto;
 }
@@ -345,7 +398,7 @@ footer {
 }
 
 .down {
-    background: url('./Images/Playlist Background.avif');
+    background: #003049ff;
     background-size: cover;
     width: 100%;
 }
@@ -406,5 +459,23 @@ footer {
 /*-- PLAYLIST List / index.html --*/
 
 #selected {
-    background: red;
+    background: #003049ff;
+}
+#selected a {
+    color: white;
+}
+
+/*--PLAYLIST List / 01, 02, 03, ...*/
+.video-placer {
+    height: 700px;
+}
+
+.spotify {
+    width: 615px;
+    height: 300px;
+}
+
+.tidal {
+    margin-top: -70px;
+    border: none;
 }
